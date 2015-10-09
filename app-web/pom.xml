@@ -13,6 +13,10 @@
     <packaging>war</packaging>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <jetty.http.port>9999</jetty.http.port>
+    </properties>
+
     <build>
         <defaultGoal>install</defaultGoal>
         <plugins>
@@ -46,6 +50,10 @@
                     <webAppConfig>
                         <contextPath>/app-web</contextPath>
                     </webAppConfig>
+                    <httpConnector>
+                        <!--host>localhost</host-->
+                        <port>9999</port>
+                    </httpConnector>
                 </configuration>
             </plugin>
         </plugins>
